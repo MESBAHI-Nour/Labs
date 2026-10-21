@@ -12,3 +12,5 @@
 10. Design Thinking
 11. Issues (github)
 12. Scrum
+13. git et github
+14. starter
