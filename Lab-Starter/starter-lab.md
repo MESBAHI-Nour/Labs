@@ -34,6 +34,11 @@ style: |
 Git · Windows · VS Code · Markdown
 
 ---
+# Plan
+1. Les problèmes
+2. Les solutions
+3. les etapes pour resoudre chaque problèmes
+---
 
 # 1. Les problèmes
 
@@ -58,8 +63,9 @@ Git · Windows · VS Code · Markdown
 | Prévisualiser HTML en direct | Extension **[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)** |
 
 ---
-
-# 3. Initialiser Git
+# 3. les ètapes pour resoudre chaque problèmes
+---
+# Initialiser Git
 
 
 1. Ouvrir le dossier du projet dans VS Code.
@@ -74,7 +80,7 @@ git init
 
 ---
 
-# 4. Afficher les fichiers cachés
+# Afficher les fichiers cachés
 
 Pour voir des fichiers comme `.gitignore` ou `.env` :
 
@@ -85,7 +91,7 @@ Pour voir des fichiers comme `.gitignore` ou `.env` :
 
 ---
 
-# 5. Afficher les extensions de fichiers
+# Afficher les extensions de fichiers
 
 Pour distinguer `README.md` de `README.md.txt` :
 
@@ -96,7 +102,7 @@ Pour distinguer `README.md` de `README.md.txt` :
 
 ---
 
-# 6. Repérer les tâches avec Better Todo Tree
+# Repérer les tâches avec Better Todo Tree
 
 **Rôle :** recherche les commentaires `TODO` et `FIXME`, les regroupe dans une arborescence et permet d’ouvrir directement la ligne concernée.
 
@@ -115,7 +121,7 @@ Pour distinguer `README.md` de `README.md.txt` :
 
 ---
 
-# 7. Vérifier Markdown avec markdownlint
+# Vérifier Markdown avec markdownlint
 
 1. Ouvrir **Extensions** : `Ctrl + Shift + X`.
 2. Rechercher **markdownlint** (éditeur : David Anson), puis installer.
@@ -127,7 +133,7 @@ Pour distinguer `README.md` de `README.md.txt` :
 
 ---
 
-# 8. Prévisualiser avec Live Server
+# Prévisualiser avec Live Server
 
 1. Ouvrir **Extensions** : `Ctrl + Shift + X`.
 2. Rechercher **Live Server** (éditeur : Ritwick Dey), puis installer.
