@@ -31,7 +31,7 @@ style: |
 
 **Préparer son environnement de développement**
 
-Git · Windows · VS Code · Markdown
+Git · Windows · VS Code 
 
 ---
 # Plan
@@ -46,7 +46,6 @@ Git · Windows · VS Code · Markdown
 - **Fichiers cachés** : `.gitignore` ou `.env` n'apparaissent pas dans l'Explorateur.
 - **Extensions cachées** : `README.md` apparaît seulement comme `README`.
 - **TODO** : les tâches à faire sont dispersées dans le code.
-- **Markdown** : erreurs de formatage dans les fichiers `.md`.
 - **Aperçu web** : ouvrir et actualiser manuellement les pages HTML.
 
 ---
@@ -59,7 +58,6 @@ Git · Windows · VS Code · Markdown
 | Voir les fichiers cachés | Explorateur Windows : **Éléments masqués** |
 | Voir `.md`, `.js`, `.php`… | Explorateur Windows : **Extensions de noms de fichiers** |
 | Repérer les TODO dans le code | Extension **[Better Todo Tree](https://marketplace.visualstudio.com/items?itemName=FanaticPythoner.better-todo-tree)** |
-| Repérer les erreurs Markdown | Extension **[markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)** |
 | Prévisualiser HTML en direct | Extension **[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)** |
 
 ---
@@ -121,17 +119,6 @@ Pour distinguer `README.md` de `README.md.txt` :
 
 ---
 
-# Vérifier Markdown avec markdownlint
-
-1. Ouvrir **Extensions** : `Ctrl + Shift + X`.
-2. Rechercher **markdownlint** (éditeur : David Anson), puis installer.
-3. Ouvrir un fichier `.md` et examiner les soulignements d'avertissement.
-4. Ouvrir **Problems** avec `Ctrl + Shift + M` pour lire les détails.
-5. Placer le curseur sur un avertissement et essayer `Ctrl + .` pour les corrections proposées.
-
-> L'extension signale les problèmes de style et de structure Markdown.
-
----
 
 # Prévisualiser avec Live Server
 
