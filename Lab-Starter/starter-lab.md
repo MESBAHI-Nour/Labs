@@ -53,7 +53,7 @@ Git · Windows · VS Code · Markdown
 | Initialiser Git | Source Control de VS Code ou `git init` |
 | Voir les fichiers cachés | Explorateur Windows : **Éléments masqués** |
 | Voir `.md`, `.js`, `.php`… | Explorateur Windows : **Extensions de noms de fichiers** |
-| Repérer les TODO dans le code | Extension **[TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)** |
+| Repérer les TODO dans le code | Extension **[Better Todo Tree](https://marketplace.visualstudio.com/items?itemName=FanaticPythoner.better-todo-tree)** |
 | Repérer les erreurs Markdown | Extension **[markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)** |
 | Prévisualiser HTML en direct | Extension **[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)** |
 
@@ -96,23 +96,22 @@ Pour distinguer `README.md` de `README.md.txt` :
 
 ---
 
-# 6. Repérer les tâches avec TODO Highlight
+# 6. Repérer les tâches avec Better Todo Tree
 
-**Rôle :** met en évidence les mots-clés `TODO` et `FIXME` dans le code pour repérer les tâches et problèmes à traiter.
+**Rôle :** recherche les commentaires `TODO` et `FIXME`, les regroupe dans une arborescence et permet d’ouvrir directement la ligne concernée.
 
 1. Ouvrir **Extensions** : `Ctrl + Shift + X`.
-2. Rechercher **TODO Highlight** (éditeur : Wayou Liu), puis installer.
-3. Dans un fichier de code, ajouter des commentaires :
+2. Rechercher **Better Todo Tree** (éditeur : FanaticPythoner), puis installer.
+3. Ouvrir le dossier du projet dans VS Code.
+4. Ajouter des commentaires dans le code :
 
 ```js
 // TODO: ajouter la validation
 // FIXME: corriger cette erreur
 ```
 
-4. Enregistrer le fichier : les mots-clés sont colorés dans l’éditeur.
-5. Pour afficher la liste des annotations, ouvrir la palette avec `Ctrl + Shift + P`, puis lancer **TODO-Highlight: List highlighted annotations**.
-
-
+5. Cliquer sur l’icône **Better Todo Tree** dans la barre latérale.
+6. Cliquer sur une annotation pour ouvrir le fichier à la ligne correspondante.
 
 ---
 
