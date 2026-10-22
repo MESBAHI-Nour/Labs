@@ -1,196 +1,139 @@
 ---
 marp: true
 theme: default
-paginate: false
 size: 16:9
+paginate: true
 style: |
-  @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
   section {
-    background: #70020f;
-    color: #ffe0e3;
-    font-family: 'Arial', 'Helvetica', sans-serif;
-    font-size: 26px;
-    padding: 50px 60px;
-    text-transform: uppercase;
-    justify-content: flex-start;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #202938;
+    padding: 48px 64px;
   }
-  h1, h2 {
-    font-family: 'Anton', 'Impact', 'Arial Narrow', sans-serif;
-    font-weight: 400;
-    color: #ffe0e3;
-    line-height: 0.95;
-    letter-spacing: -1px;
-    margin: 0 0 30px 0;
+  h1 {
+    color: #1769aa;
   }
-  h1 { font-size: 110px; }
-  h2 { font-size: 84px; }
-  h3 {
-    font-size: 28px;
-    margin: 0;
-    color: #e6d9dc;
+  h2 {
+    color: #1769aa;
   }
-  p { margin: 0 0 6px 0; }
-
-  /* Light variant (pink background, dark red text) */
-  section.light { background: #ffdde0; color: #70020f; }
-  section.light h1, section.light h2 { color: #70020f; }
-  section.light p, section.light li {
-    font-family: 'Anton', 'Impact', 'Arial Narrow', sans-serif;
-    font-size: 30px;
-    line-height: 1.35;
-    color: #111;
+  strong {
+    color: #1769aa;
   }
-
-  /* Title slide */
-  section.title { justify-content: space-between; }
-  section.title h1 { font-size: 150px; margin-top: 0; }
-  section.title::before {
-    content: "DEVEL\A OPER";
-    white-space: pre;
-    position: absolute;
-    right: -60px;
-    top: 230px;
-    font-family: 'Anton', 'Impact', sans-serif;
-    font-size: 300px;
-    line-height: 0.95;
-    color: #5f0010;
-    z-index: 0;
+  code {
+    background: #eef4fa;
+    color: #143b5d;
   }
-  section.title h1, section.title .by { position: relative; z-index: 1; }
-  .by { font-size: 20px; text-transform: none; }
-  .by strong {
-    font-family: 'Anton', 'Impact', sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 24px;
-    display: block;
-  }
-
-  /* Two-column layout */
-  .cols {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    text-align: center;
-    margin-top: 60px;
-  }
-  .cols .col {
-    font-family: 'Anton', 'Impact', sans-serif;
-    font-size: 34px;
-    line-height: 1.25;
-  }
-
-  /* Extension lists */
-  ul.ext { list-style: none; padding: 0; margin: 10px 0 0 0; }
-  ul.ext li { margin-bottom: 22px; font-size: 22px; line-height: 1.3; }
-  ul.ext li strong {
-    display: block;
-    font-size: 30px;
-    color: #e6d9dc;
-    margin-bottom: 2px;
-  }
-
-  /* Bullet lists on dark slides */
-  section:not(.light) ul:not(.ext) {
-    font-family: 'Anton', 'Impact', sans-serif;
-    font-size: 30px;
-    line-height: 1.35;
-  }
-  .hl { color: #4a6fe3; }
-  section.light strong { color: #70020f; }
 ---
 
-<!-- _class: title -->
+<!-- _class: lead -->
 
-# Developer<br>Starter<br>Pack
+# Lab-Starter
 
-<div class="by">
+**Préparer son environnement de développement**
 
-
-</div>
+Git · Windows · VS Code · Markdown
 
 ---
 
-## 1. Code Editor / IDE
+# 1. Les problèmes
 
-<div class="cols">
-<div class="col">
-
-<!-- Add VS Code logo: ![w:200](vscode.png) -->
-Visual Studio Code<br>
-1 - Free<br>
-2 - Beginner-friendly
-
-</div>
-<div class="col">
-
-<!-- Add JetBrains logo: ![w:200](jetbrains.png) -->
-JetBrains IDEs<br>
-(PyCharm, IntelliJ, PhpStorm)
-
-</div>
-</div>
+- **Git** : le projet n'est pas initialisé, les changements ne sont pas suivis.
+- **Fichiers cachés** : `.gitignore` ou `.env` n'apparaissent pas dans l'Explorateur.
+- **Extensions cachées** : `README.md` apparaît seulement comme `README`.
+- **TODO** : les tâches à faire sont dispersées dans le code.
+- **Markdown** : erreurs de formatage dans les fichiers `.md`.
+- **Aperçu web** : ouvrir et actualiser manuellement les pages HTML.
 
 ---
 
-## Best VS Code<br>Extensions
+# 2. Les solutions
 
-<ul class="ext">
-<li><strong>Live Server</strong>Launches a local development server with a live reload feature</li>
-<li><strong>Prettier</strong>A code formatter. It automatically cleans up, indents, and structures your code</li>
-<li><strong>GitLens</strong>Visualizes code authorship directly inside your files</li>
-<li><strong>Todo Tree</strong>Scans your workspace for comment tags like <b>TODO</b> or <b>FIXME</b> and organizes them into a clear tree view so you never forget unfinished tasks</li>
-<li><strong>Error Lens</strong>Radically changes how you see mistakes in your code by bringing errors directly to your line of sight rather than hiding them at the bottom of the screen</li>
-</ul>
-
----
-
-<ul class="ext">
-<li><strong>Auto Rename Tag</strong>It auto renames the other tag whether it is a closing or opening tag</li>
-<li><strong>Auto-Open Markdown Preview</strong>Automatically opens the preview of a Markdown file</li>
-<li><strong>Code Runner</strong>Lets you run multiple programming languages in the console by clicking a play button</li>
-<li><strong>GitHub Copilot</strong>An AI assistant integrated right in the IDE. It can solve problems or refactor and debug code</li>
-</ul>
+| Problème | Solution |
+|---|---|
+| Initialiser Git | Source Control de VS Code ou `git init` |
+| Voir les fichiers cachés | Explorateur Windows : **Éléments masqués** |
+| Voir `.md`, `.js`, `.php`… | Explorateur Windows : **Extensions de noms de fichiers** |
+| Repérer les TODO dans le code | Extension **[TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)** |
+| Repérer les erreurs Markdown | Extension **[markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)** |
+| Prévisualiser HTML en direct | Extension **[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)** |
 
 ---
 
-## Version<br>Control
+# 3. Initialiser Git
 
-- <span class="hl">Git</span>, the essential tool
-- <span class="hl">GitHub account</span> (also works as your portfolio). GitLab is an alternative.
-- <span class="hl">GitHub Desktop</span> or the GitLens extension if the command line feels heavy at first
 
-<!-- Add logos: ![w:120](git.png) ![w:100](github.png) -->
+1. Ouvrir le dossier du projet dans VS Code.
+2. Ouvrir **Source Control** avec `Ctrl + Shift + G`.
+3. Cliquer sur **Initialize Repository**.
+4. Alternative dans le terminal :
 
----
+```bash
+git init
+```
 
-<!-- _class: light -->
-
-## Browsers and<br>Dev Tools
-
-Chrome or Firefox with DevTools (Elements, Console, Network, Application tabs)
-Handy extensions: React DevTools (if you use React later), JSON Viewer, Lighthouse
 
 ---
 
-<!-- _class: light -->
+# 4. Afficher les fichiers cachés
 
-## Runtimes and<br>Languages
+Pour voir des fichiers comme `.gitignore` ou `.env` :
 
-Install only what you need:
-Node.js (LTS), which includes npm
-Python 3
-PHP, if you're doing PHP work
-Java JDK, if you're going the Java or Android route
+1. Ouvrir l'Explorateur de fichiers avec `Win + E`.
+2. Cliquer sur **Affichage**.
+3. Choisir **Afficher** → **Éléments masqués**.
+4. Les fichiers cachés deviennent visibles.
 
 ---
 
-## Local Server and<br>Database
+# 5. Afficher les extensions de fichiers
 
-- XAMPP or Laragon gives you Apache, PHP, and MySQL in one install (great for PHP/MySQL projects)
-- phpMyAdmin (comes with XAMPP) or DBeaver to manage databases
-- MySQL Workbench for visual schema design
-- SQLite for quick, lightweight projects
+Pour distinguer `README.md` de `README.md.txt` :
 
-<!-- Add logos: ![w:120](mysql.png) ![w:120](xampp.png) -->
+1. Ouvrir l'Explorateur de fichiers avec `Win + E`.
+2. Cliquer sur **Affichage** → **Afficher**.
+3. Activer **Extensions de noms de fichiers**.
+4. Vérifier le vrai nom du fichier, par exemple `README.md`.
+
+---
+
+# 6. Repérer les tâches avec TODO Highlight
+
+**Rôle :** met en évidence les mots-clés `TODO` et `FIXME` dans le code pour repérer les tâches et problèmes à traiter.
+
+1. Ouvrir **Extensions** : `Ctrl + Shift + X`.
+2. Rechercher **TODO Highlight** (éditeur : Wayou Liu), puis installer.
+3. Dans un fichier de code, ajouter des commentaires :
+
+```js
+// TODO: ajouter la validation
+// FIXME: corriger cette erreur
+```
+
+4. Enregistrer le fichier : les mots-clés sont colorés dans l’éditeur.
+5. Pour afficher la liste des annotations, ouvrir la palette avec `Ctrl + Shift + P`, puis lancer **TODO-Highlight: List highlighted annotations**.
+
+
+
+---
+
+# 7. Vérifier Markdown avec markdownlint
+
+1. Ouvrir **Extensions** : `Ctrl + Shift + X`.
+2. Rechercher **markdownlint** (éditeur : David Anson), puis installer.
+3. Ouvrir un fichier `.md` et examiner les soulignements d'avertissement.
+4. Ouvrir **Problems** avec `Ctrl + Shift + M` pour lire les détails.
+5. Placer le curseur sur un avertissement et essayer `Ctrl + .` pour les corrections proposées.
+
+> L'extension signale les problèmes de style et de structure Markdown.
+
+---
+
+# 8. Prévisualiser avec Live Server
+
+1. Ouvrir **Extensions** : `Ctrl + Shift + X`.
+2. Rechercher **Live Server** (éditeur : Ritwick Dey), puis installer.
+3. Ouvrir le projet contenant `index.html`.
+4. Cliquer sur **Go Live** en bas de VS Code.
+5. La page s'ouvre dans le navigateur et s'actualise après les modifications enregistrées.
+
+> Live Server sert les pages statiques HTML , il n'exécute pas le code PHP.
