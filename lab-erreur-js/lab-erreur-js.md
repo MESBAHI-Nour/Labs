@@ -126,6 +126,7 @@ style: |
 ---
 
 # Lab : Identification, Compréhension et Résolution d’Erreurs JavaScript
+Encadrant : ES-SARRAJ Fouad
 
 ---
 

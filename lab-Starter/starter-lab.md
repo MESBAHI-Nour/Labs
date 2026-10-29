@@ -32,6 +32,7 @@ style: |
 **Préparer son environnement de développement**
 
 Git · Windows · VS Code 
+Encadrant : ES-SARRAJ Fouad
 
 ---
 # Plan

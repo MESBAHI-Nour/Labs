@@ -79,6 +79,7 @@ style: |
 ## Explorer · Expérimenter · Innover
 
 **Découvrir — Tester — Construire**
+Encadrant : ES-SARRAJ Fouad
 
 ![bg right:45%](https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1200&q=85)
 

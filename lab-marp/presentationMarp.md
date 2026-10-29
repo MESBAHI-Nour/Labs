@@ -188,6 +188,7 @@ style: |
 <!-- _class: lead -->
 
 # Découverte de Marp
+Encadrant : ES-SARRAJ Fouad
 
 ---
 

@@ -7,6 +7,7 @@ paginate: true
 
 # Lab 02 — Skills pour Agents IA
 Conception et automatisation modulaire
+Encadrant : ES-SARRAJ Fouad
 
 ---
 

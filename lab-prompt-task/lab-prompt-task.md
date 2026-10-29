@@ -44,6 +44,7 @@ style: |
 <!-- _class: lead -->
 
 # Rédiger un prompt de tâche efficace
+Encadrant : ES-SARRAJ Fouad
 
 ---
 

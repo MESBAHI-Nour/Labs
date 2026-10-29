@@ -7,6 +7,7 @@ paginate: true
 # veille technologie :
 
 La veille technologique consiste à rechercher et suivre régulièrement les nouvelles technologies pour rester à jour.
+> Encadrant : ES-SARRAJ Fouad
 
 ----
 
