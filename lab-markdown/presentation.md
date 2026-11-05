@@ -1,178 +1,123 @@
----
-marp: true
-theme: default
-paginate: true
-size: 16:9
-style: |
-  section {
-    background: #111827;
-    color: #f9fafb;
-    font-family: Inter, system-ui, sans-serif;
-    padding: 48px 64px;
-  }
-  section.light {
-    background: #f8fafc;
-    color: #172033;
-  }
-  h1, h2, h3 {
-    font-family: Anton, Impact, sans-serif;
-    color: #38bdf8;
-  }
-  section.light h1, section.light h2, section.light h3 {
-    color: #0369a1;
-  }
-  a {
-    color: #38bdf8;
-  }
-  section.light a {
-    color: #0369a1;
-  }
-  code {
-    background: #484f59;
-  }
----
+# Streamix – Plateforme de streaming de films
 
-# Markdown
-Encadrant : ES-SARRAJ Fouad
+## 1. Sujet du projet
 
----
+**Streamix** est une plateforme de streaming de films.
 
-<!-- _class: light -->
+Elle permet aux utilisateurs de découvrir et de consulter des films. Les films sont organisés par genre cinématographique et par réalisateur.
 
-## Lab Plan
+## 2. Objectif du projet
 
-1. Introduction
-2. Problems Encountered
-3. Solutions Implemented
+L'objectif est de créer une plateforme simple pour gérer et consulter des films.
 
----
+Le projet permet de :
 
-## Introduction
+- Afficher les films.
+- Ajouter un film.
+- Modifier un film.
+- Supprimer un film.
+- Gérer les réalisateurs.
+- Gérer les genres cinématographiques.
+- Classer les films par genre.
 
-### Qu'est-ce que Markdown ?
+## 3. Technologies utilisées
 
-Markdown est un langage de balisage léger qui permet de formater du texte avec une syntaxe simple et lisible.
+| Partie | Technologie | Utilisation |
+|---|---|---|
+| Frontend | HTML | Structure des pages |
+| Frontend | JavaScript | Actions de la page |
+| Frontend | Tailwind CSS | Design de la page |
+| Backend | PHP | Traitement des données |
+| Communication | Fetch API | Échange des données |
+| Stockage | JSON | Enregistrement des données |
 
-### Objectifs du lab
+## 4. Structure des données
 
-- Structurer un document avec des titres et des paragraphes.
-- Mettre en forme du texte et créer des listes.
-- Ajouter des liens, des images et du code.
-- Produire un fichier facile à lire et à partager.
+Le projet utilise trois tables principales :
 
----
+### Réalisateur
 
-<!-- _class: light -->
+Cette table contient les informations des réalisateurs.
 
-## Problems Encountered
+### Film
 
-Dans cet exercice d'initiation, aucun problème bloquant n'est signalé. Quelques erreurs fréquentes sont toutefois à surveiller :
+C'est la table principale du projet. Elle contient les informations des films.
 
-- Oublier l'espace après les `#` d'un titre.
-- Utiliser une indentation incohérente dans une liste imbriquée.
-- Oublier les lignes de délimitation d'un bloc de code.
-- Indiquer un mauvais chemin ou texte alternatif pour une image.
+### Genre cinématographique
 
----
+Cette table permet de classer les films par genre.
 
-## Solutions Implemented
+## 5. Fonctionnalités principales
 
-- Ajouter un espace après les symboles de titre : `## Mon titre`.
-- Indenter régulièrement les sous-listes, de préférence avec deux espaces.
-- Encadrer le code par trois accents graves et préciser le langage.
-- Vérifier le chemin de l'image et renseigner une description utile.
-- Prévisualiser le fichier pour contrôler le rendu final.
+- **Gestion des films** : ajouter, afficher, modifier et supprimer.
+- *Gestion des réalisateurs* : organiser les réalisateurs.
+- ~~Gestion manuelle des films~~ : les données sont gérées par la plateforme.
 
----
+## 6. Exemple de code
 
-<!-- _class: light -->
-
-## Titres et texte
-
-Le nombre de `#` détermine le niveau du titre. Utilisez les niveaux dans l'ordre pour garder une structure claire.
-
-```markdown
-# Titre principal
-## Section
-### Sous-section
-```
-
-Markdown permet aussi de mettre du texte en forme :
-
-```markdown
-**Texte en gras**
-*Texte en italique*
-***Gras et italique***
-```
-
----
-
-## Listes
-
-### Liste non ordonnée
-
-```markdown
-- HTML
-- CSS
-- JavaScript
-```
-
-### Liste ordonnée et liste imbriquée
-
-```markdown
-1. Préparer le document
-2. Ajouter le contenu
-
-- Frontend
-  - HTML
-  - CSS
-```
-
----
-
-<!-- _class: light -->
-
-## Liens et images
-
-Un lien associe un texte descriptif à une adresse :
-
-```markdown
-[Documentation Markdown](https://www.markdownguide.org/)
-```
-
-Une image utilise une syntaxe similaire, avec un texte alternatif :
-
-```markdown
-![Description de l'image](images/exemple.jpg)
-```
-
-Le chemin de l'image peut être relatif au fichier Markdown.
-
----
-
-## Blocs de code
-
-Les accents graves délimitent un bloc de code. Le nom du langage active sa coloration syntaxique dans les outils compatibles.
-
-````markdown
-```javascript
-console.log("Hello World");
-```
-````
-
-Exemple rendu :
+Exemple d'une requête avec Fetch API :
 
 ```javascript
-console.log("Hello World");
+fetch("http://localhost/backend/films.php")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.log("Erreur :", error);
+    });
 ```
+
+## 7. Bloc de code
+
+Exemple d'une réponse JSON :
+
+```json
+{
+    "id": 1,
+    "titre": "Inception",
+    "realisateur": "Christopher Nolan",
+    "genre": "Science-fiction"
+}
+```
+
+## 8. Image du projet
+
+![Plateforme de streaming Streamix](images/streamix.png)
+
+## 9. Lien du projet
+
+[Découvrir Streamix](https://github.com/MESBAHI-Nour/projet-technique/tree/session_3/prototype)
+
+## 10. Liste des tâches
+
+- [x] Définir le sujet du projet.
+- [x] Choisir les technologies.
+- [ ] Créer les pages HTML.
+- [ ] Développer le backend PHP.
+- [ ] Ajouter la communication avec Fetch API.
+- [ ] Gérer les données JSON.
+- [ ] Tester les fonctionnalités.
+
+## 11. Étapes de réalisation
+
+1. Créer la structure du projet.
+2. Créer les interfaces avec HTML et Tailwind CSS.
+3. Ajouter les actions avec JavaScript.
+4. Développer les traitements avec PHP.
+5. Enregistrer les données en JSON.
+6. Tester la plateforme.
+
+## 12. Citation
+
+> Le cinéma est une fenêtre ouverte sur le monde.
 
 ---
 
-<!-- _class: light -->
+## Conclusion
 
-## À retenir
+**Streamix** est un projet de plateforme de streaming de films.
 
-- Markdown rend les documents simples à écrire et à relire.
-- Une syntaxe régulière améliore la lisibilité et évite les erreurs de rendu.
-- Les titres, listes, liens, images et blocs de code couvrent les besoins essentiels.
-- Une prévisualisation permet de vérifier le résultat avant de partager le document.
+Il utilise HTML, JavaScript, Tailwind CSS, PHP, Fetch API et JSON.
+
+Son objectif est de proposer une plateforme simple pour organiser et consulter des films.
