@@ -46,7 +46,49 @@ des notions de la programmation orientée objet (POO) en PHP ne sont pas encore 
 
 ## Solution
 
-Six notions, six scripts autonomes et exécutables.
+Six notions expliquées par leur rôle et leur importance.
+
+---
+
+## Classe abstraite
+
+- **Rôle :** base commune, non instanciable directement.
+- **Importance :** partager des éléments et imposer des méthodes aux classes dérivées.
+
+---
+
+## Interface
+
+- **Rôle :** définir un contrat de méthodes.
+- **Importance :** permettre à des classes différentes de respecter le même contrat.
+
+---
+
+## Héritage
+
+- **Rôle :** une classe dérivée étend une classe parente.
+- **Importance :** réutiliser et spécialiser un comportement commun.
+
+---
+
+## Polymorphisme
+
+- **Rôle :** utiliser plusieurs objets via un même type.
+- **Importance :** adapter le comportement sans changer le code client.
+
+---
+
+## Encapsulation
+
+- **Rôle :** protéger l’état interne d’un objet.
+- **Importance :** contrôler les modifications et préserver sa cohérence.
+
+---
+
+## Membres statiques
+
+- **Rôle :** associer une propriété ou méthode à la classe.
+- **Importance :** partager une donnée ou appeler une opération sans instance.
 
 ---
 
