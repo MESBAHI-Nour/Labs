@@ -4,10 +4,14 @@ theme: default
 size: 16:9
 paginate: true
 ---
+![Logo OFPPT](images/ofppt-logo.png) ![Logo SoliCode](images/solicode-logo.png)
 
 # Lab 04 — Gestion des erreurs, namespaces et traits en PHP
 
 Exceptions · organisation · réutilisation
+
+**Présenté par** : Mesbahi Nour  
+**Encadré par** : ES-Sarraj Fouad
 
 ---
 
@@ -55,126 +59,18 @@ php -r "echo 'Bonjour PHP', PHP_EOL;"
 
 ---
 
-## Quick Start — fichiers
+## Quick Start — exceptions
 
-Exécution dans `exemples/quick-start/`
-
----
-
-## Quick Start — trait partagé
-
-`exemples/quick-start/src/Support/LoggerTrait.php`
-
-```php
-namespace App\Support;
-
-trait LoggerTrait
-{
-    protected function log(string $message): void
-    {
-        echo "[INFO] {$message}" . PHP_EOL;
-    }
-}
-```
-
----
-
-## Quick Start — classe métier
-
-`exemples/quick-start/src/Domain/User.php` · partie 1/2
-
-```php
-namespace App\Domain;
-
-use App\Support\LoggerTrait;
-
-class User
-{
-    use LoggerTrait;
-
-    public string $name;
-    public int $age;
-
-    public function __construct(
-        string $name,
-        int $age
-    ) {
-```
-
----
-
-## Quick Start — validation
-
-`exemples/quick-start/src/Domain/User.php` · partie 2/2
-
-À assembler après la partie 1.
-
-```php
-        if (trim($name) === '' || $age < 0) {
-            throw new \InvalidArgumentException('Nom ou âge invalide.');
-        }
-        $this->name = $name;
-        $this->age = $age;
-        $this->log("Utilisateur créé : {$name}");
-    }
-}
-```
-
----
-
-## Quick Start — service
-
-`exemples/quick-start/src/Service/UserService.php`
-
-```php
-namespace App\Service;
-
-use App\Domain\User;
-use App\Support\LoggerTrait;
-
-class UserService
-{
-    use LoggerTrait;
-
-    public function register(string $name, int $age): User
-    {
-        $user = new User($name, $age);
-        $this->log("Inscription terminée pour {$name}");
-        return $user;
-    }
-}
-```
-
----
-
-## Quick Start — point d’entrée 1/2
-
-`exemples/quick-start/index.php` · chargement
-
-```php
-<?php
-declare(strict_types=1);
-
-use App\Service\UserService;
-
-require_once __DIR__ . '/src/Support/LoggerTrait.php';
-require_once __DIR__ . '/src/Domain/User.php';
-require_once __DIR__ . '/src/Service/UserService.php';
-```
-
----
-
-## Quick Start — point d’entrée 2/2
-
-`exemples/quick-start/index.php` · traitement
-Assembler après la partie 1.
+`lab-php/exemples/exceptions/index.php`
 
 ```php
 try {
-    $service = new UserService();
-    $user = $service->register('Amina', 22);
-    echo "Inscrit : {$user->name}" . PHP_EOL;
-} catch (\InvalidArgumentException $exception) {
+    if ($age === false || $age < 0) {
+        throw new InvalidArgumentException('Âge invalide.');
+    }
+
+    echo "Âge accepté : {$age}" . PHP_EOL;
+} catch (InvalidArgumentException $exception) {
     fwrite(STDERR, $exception->getMessage() . PHP_EOL);
     exit(1);
 }
@@ -182,12 +78,70 @@ try {
 
 ---
 
-## Quick Start — tests
+## Quick Start — classe namespacée
 
-```powershell
-Set-Location .\labs\lab-php-erreurs-namespaces-traits\exemples\quick-start
-php index.php
+`lab-php/exemples/namespaces/src/Domain/Article.php`
+
+```php
+namespace App\Domain;
+
+class Article
+{
+    public string $title;
+
+    public function __construct(string $title)
+    {
+        $this->title = $title;
+    }
+}
 ```
 
-- Essayez ensuite un âge négatif.
-- Vérifiez le message et le code retour.
+---
+
+## Quick Start — utilisation du namespace
+
+`lab-php/exemples/namespaces/index.php`
+
+```php
+use App\Domain\Article;
+use App\Service\ArticleSummary;
+
+$article = new Article('PHP et les namespaces');
+echo ArticleSummary::format($article) . PHP_EOL;
+```
+
+---
+
+## Quick Start — trait autonome
+
+`lab-php/exemples/traits/index.php`
+
+```php
+trait GreetingTrait
+{
+    public function greet(): string
+    {
+        return "Bonjour, {$this->name}";
+    }
+}
+
+class Student
+{
+    use GreetingTrait;
+    public string $name = 'Amina';
+}
+```
+
+---
+
+## Quick Start — vérifier séparément
+
+```powershell
+php .\lab-php\exemples\exceptions\index.php 22
+php .\lab-php\exemples\exceptions\index.php -1
+php .\lab-php\exemples\namespaces\index.php
+php .\lab-php\exemples\traits\index.php
+```
+
+- Chaque exemple est autonome.
+- Aucun programme ne regroupe les trois notions.

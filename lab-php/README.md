@@ -22,28 +22,11 @@ Ce lab est nécessaire pour apprendre à signaler et traiter les données invali
 
 ## 3. Réalisation attendue
 
-L’exemple pratique attendu est une petite application PHP exécutable en ligne de commande qui inscrit un utilisateur. Elle doit être organisée en plusieurs classes et montrer concrètement les trois notions du lab :
+Réaliser les travaux suivants. Garder un exemple autonome pour chaque notion ; ne pas regrouper les notions dans une seule application.
 
-```text
-exemples/quick-start/
-├── index.php
-└── src/
-    ├── Domain/
-    │   └── User.php
-    ├── Service/
-    │   └── UserService.php
-    └── Support/
-        └── LoggerTrait.php
-```
-
-- Les classes métier et service utilisent des namespaces.
-- `User` valide les données et lève une exception si elles sont invalides.
-- `User` et `UserService` réutilisent le même trait de journalisation.
-- `index.php` charge les fichiers, exécute une inscription et intercepte l’exception.
-- Le cas valide affiche la confirmation ; avec un nom vide ou un âge négatif, le point d’entrée affiche un message de refus.
-- L’exemple fonctionne sans dépendance Composer et peut être testé depuis le terminal.
-
-**Parcours :** vérifier PHP en ligne de commande, examiner les classes du Quick Start, puis lancer l’exemple avec une entrée valide et une entrée invalide.
+1. Créer et exécuter un exemple PHP qui lève puis intercepte une exception lorsqu’une donnée invalide est fournie. Vérifier le résultat avec une donnée valide et une donnée invalide.
+2. Créer et exécuter un exemple PHP distinct qui déclare des classes dans des namespaces et les utilise correctement.
+3. Créer et exécuter un autre exemple PHP distinct qui partage une méthode entre plusieurs classes avec un trait.
 
 **Ressources du lab :**
 - [Introduction](./1-introduction.md)
@@ -51,4 +34,6 @@ exemples/quick-start/
 - [Pratique détaillée](./3-practical.md)
 - [Présentation Marp](./4-presentation.md)
 - [Prompt de contenu à exécuter plus tard](./PROMPT-CONTENU.md)
-- [Exemple PHP exécutable](./exemples/quick-start/)
+- [Exemple sur les exceptions](./exemples/exceptions/)
+- [Exemple sur les namespaces](./exemples/namespaces/)
+- [Exemple sur les traits](./exemples/traits/)

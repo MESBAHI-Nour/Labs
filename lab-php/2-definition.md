@@ -14,4 +14,4 @@ Une exception signale un cas anormal, un namespace nomme un espace de classes, e
 - **Chargement :** un namespace ne charge pas automatiquement les fichiers. Ce lab utilise des `require_once` explicites ; Composer et l’autoloading PSR-4 sont une autre approche, non nécessaire ici.
 
 ## Exemple simple ou distinction utile
-`User` peut refuser un âge négatif en lançant `\InvalidArgumentException`. Le code appelant peut entourer l’inscription par `try`/`catch`. Plusieurs classes peuvent employer `LoggerTrait` pour réutiliser sa méthode `log()`, tandis que leur nom complet les distingue, par exemple `App\Domain\User` et `App\Service\UserService`.
+Un exemple sur les exceptions peut refuser un âge négatif avec `\InvalidArgumentException` et intercepter le cas avec `try`/`catch`. Un exemple séparé peut illustrer des classes aux noms complets distincts, comme `App\Domain\Article` et `App\Service\ArticleSummary`. Un troisième exemple peut montrer deux classes réutilisant un même trait. Ces notions sont testées séparément.
