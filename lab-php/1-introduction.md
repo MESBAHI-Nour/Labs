@@ -8,12 +8,11 @@ Les exceptions rendent les échecs prévisibles ; les namespaces organisent les 
 
 ## Objectifs pédagogiques
 - Détecter une donnée invalide et lancer une exception adaptée.
-- Intercepter l’exception sans interrompre silencieusement le programme.
+- Intercepter l'exception sans interrompre silencieusement le programme.
 - Déclarer et importer un namespace.
 - Partager une méthode entre deux classes avec un trait.
 - Exécuter séparément un exemple pour chaque notion.
 
 ## Parcours du lab
 1. Définir les notions et préparer PHP en ligne de commande.
-2. Exécuter un Hello World.
-3. Réaliser et tester les exemples indépendants sur les exceptions, les namespaces et les traits.
+2. Réaliser et tester les exemples indépendants sur les exceptions, les namespaces et les traits.

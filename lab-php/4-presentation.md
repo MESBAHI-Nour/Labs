@@ -21,7 +21,6 @@ Exceptions · organisation · réutilisation
 - Problématique
 - Solution
 - Définition
-- Hello World
 - Quick Start
 
 ---
@@ -51,17 +50,9 @@ Exceptions traitées, namespaces organisés, méthodes partagées par traits.
 
 ---
 
-## Hello World
-
-```powershell
-php -r "echo 'Bonjour PHP', PHP_EOL;"
-```
-
----
-
 ## Quick Start — exceptions
 
-`lab-php/exemples/exceptions/index.php`
+`pratique/exceptions/index.php`
 
 ```php
 try {
@@ -80,7 +71,7 @@ try {
 
 ## Quick Start — classe namespacée
 
-`lab-php/exemples/namespaces/src/Domain/Article.php`
+`pratique/namespaces/src/Domain/Article.php`
 
 ```php
 namespace App\Domain;
@@ -100,7 +91,7 @@ class Article
 
 ## Quick Start — utilisation du namespace
 
-`lab-php/exemples/namespaces/index.php`
+`pratique/namespaces/index.php`
 
 ```php
 use App\Domain\Article;
@@ -114,7 +105,7 @@ echo ArticleSummary::format($article) . PHP_EOL;
 
 ## Quick Start — trait autonome
 
-`lab-php/exemples/traits/index.php`
+`pratique/traits/index.php`
 
 ```php
 trait GreetingTrait
@@ -137,10 +128,9 @@ class Student
 ## Quick Start — vérifier séparément
 
 ```powershell
-php .\lab-php\exemples\exceptions\index.php 22
-php .\lab-php\exemples\exceptions\index.php -1
-php .\lab-php\exemples\namespaces\index.php
-php .\lab-php\exemples\traits\index.php
+php .\lab-php\pratique\exceptions\index.php
+php .\lab-php\pratique\namespaces\index.php
+php .\lab-php\pratique\traits\index.php
 ```
 
 - Chaque exemple est autonome.
