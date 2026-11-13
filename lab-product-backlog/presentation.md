@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 ---
 
-![Logo OFPPT](../.agents/skills/Lab-creator/resources/images/ofppt-logo.png) ![Logo SoliCode](../.agents/skills/Lab-creator/resources/images/solicode-logo.png)
+![Logo OFPPT](images/ofppt-logo.png) ![Logo SoliCode](images/solicode-logo.png)
 
 # Product Backlog
 
