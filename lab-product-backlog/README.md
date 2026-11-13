@@ -17,9 +17,8 @@ Ce lab permet de préparer le projet avant le développement. Il aide à identif
 
 ## 3. Réalisation attendue
 
-1. Définir le périmètre du blog pour les lauréats.
-2. Réaliser un diagramme de contexte pour identifier les utilisateurs et leurs interactions avec le blog.
-3. Découvrir la phase d’empathie du Design Thinking et son rôle dans la compréhension des utilisateurs.
-4. Identifier les besoins, les attentes et les difficultés des utilisateurs à travers une activité d’empathie.
-5. Transformer les besoins identifiés en éléments du Product Backlog.
-6. Organiser et prioriser les éléments du Product Backlog.
+1. Réaliser un diagramme de contexte pour identifier les utilisateurs et leurs interactions avec le blog.
+2. Découvrir la phase d’empathie du Design Thinking et son rôle dans la compréhension des utilisateurs.
+3. Identifier les besoins, les attentes et les difficultés des utilisateurs à travers une activité d’empathie.
+4. Transformer les besoins identifiés en éléments du Product Backlog.
+5. Organiser et prioriser les éléments du Product Backlog.

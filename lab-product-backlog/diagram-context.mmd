@@ -1,0 +1,12 @@
+usecase-beta
+direction LR
+
+actor Admin("Administrateur")
+actor Auteur("Lauréat")
+actor Visiteur("Visiteur")
+
+system ["Blog des lauréats"]
+
+Admin -- Gère les utilisateurs et modère les articles -- system
+Auteur -- Rédige, modifie et publie ses articles -- system
+Visiteur -- Consulte et recherche les articles publiés -- system
