@@ -11,7 +11,7 @@ paginate: true
 
 ## Préparer le blog des lauréats
 
-**Présenté par** : Mesbahi Nour  
+**Présenté par** : Groupe de conception preliminaire 
 **Encadré par** : ES-Sarraj Fouad
 
 ---
