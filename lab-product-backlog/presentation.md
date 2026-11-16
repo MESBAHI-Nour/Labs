@@ -22,7 +22,7 @@ paginate: true
 - Problématique
 - Solution
 - Définition
-- Livrable
+- Empathie (Persona)
 
 ---
 
@@ -62,20 +62,41 @@ Le Product Backlog est une liste ordonnée des besoins et fonctionnalités à r�
 
 ---
 
-## Livrable — Backlog initial
+## Empathie — Pense et ressent
 
-| Priorité | Besoin utilisateur |
-|---|---|
-| P1 | En tant que visiteur, consulter les articles publiés. |
-| P2 | En tant que lauréat, rédiger, modifier et publier des articles. |
+- Recherche une interface épurée et moderne.
+- Souhaite une navigation agréable et fluide.
+- Privilégie des articles courts et clairs.
 
 ---
 
-## Livrable — Backlog initial
+## Empathie — Voit et observe
 
-| Priorité | Besoin utilisateur |
-|---|---|
-| P3 | En tant qu’administrateur, gérer les utilisateurs et modérer les articles. |
-| P4 | En tant que visiteur, rechercher des articles publiés. |
+- Articles illustrés avec descriptions courtes.
+- Contenus organisés par catégories et niveaux.
+- Profils de lauréats et navigation structurée.
 
-**Priorités initiales à confirmer avec les utilisateurs.**
+---
+
+## Empathie — Dit et fait
+
+- Demande des filtres et recommandations ciblées.
+- Souhaite un historique et mode sombre.
+- Propose un espace pour les commentaires.
+
+---
+
+## Empathie — Frustrations (Pains)
+
+- Difficulté à trouver rapidement des articles.
+- Textes trop longs et présentation confuse.
+- Accès complexe aux anciennes publications.
+
+---
+
+## Empathie — Besoins (Gains)
+
+- Recherche simplifiée grâce aux filtres.
+- Recommandations pertinentes d'articles.
+- Plateforme accessible et intuitive pour débutants.
+
