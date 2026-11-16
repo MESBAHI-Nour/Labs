@@ -7,7 +7,7 @@ paginate: true
 
 ![Logo OFPPT](images/ofppt-logo.png) ![Logo SoliCode](images/solicode-logo.png)
 
-# Product Backlog
+# Empathie
 
 ## Préparer le blog des lauréats
 
